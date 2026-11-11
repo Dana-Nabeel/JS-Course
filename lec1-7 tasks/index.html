@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .editable {
+            border: 1px solid #ccc;
+            padding: 8px;
+            width: 400px;
+            min-height: 120px;
+            font-size: 16px;
+            line-height: 1.4;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .exceed,
+        #counter.exceed {
+            color: red;
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <!-- Generate random color task -->
+    <!-- <div class="container d-flex flex-column align-items-center justify-content-center py-5">
+        <button type="button" class="d-block py-3 px-4 lead shadow my-5">Generate</button>
+        <p></p>
+        <div class="row mt-4 gap-5">
+            <div class="col-4" id="b1"></div>
+            <div class="col-4" id="b2"></div>
+        </div>
+    </div> -->
+
+    <!-- highlighted extra text -->
+    <div id="editable" contenteditable="true" class="editable"></div>
+    <div id="counter"></div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

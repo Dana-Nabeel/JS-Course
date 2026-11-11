@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-white text-gray-900 transition-all duration-200">
+    <header class="p-4 bg-gray-200 flex justify-between items-center">
+      <h1 class="text-xl font-bold">Hello!</h1>
+      <button
+        class="theme-btn p-2 bg-gray-200 text-gray-700 rounded-full cursor-pointer"
+      >
+        <i class="fa-solid fa-palette"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="p-8 text-center">
+        <h2 class="text-2xl font-bold mb-4">Hello again!</h2>
+        <p class="text-gray-600">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit,
+          nihil neque temporibus voluptatibus aperiam totam iusto sunt eum?
+          Voluptatem, necessitatibus.
+        </p>
+      </section>
+
+      <div class="sidebar fixed top-[10%] right-0 bg-gray-50 shadow-lg rounded-2xl transition-all translate-x-full duration-300 p-7">
+        <div class="space-y-4">
+          <div class="theme-circle w-16 h-16 rounded-full cursor-pointer bg-[conic-gradient(#3b82f6_0deg_120deg,#60a5fa_120deg_240deg,#dbeafe_240deg_360deg)]" data-theme="bg-blue-100 text-blue-900"></div>
+
+          <div class="theme-circle w-16 h-16 rounded-full cursor-pointer bg-[conic-gradient(#22c55e_0deg_120deg,#4ade80_120deg_240deg,#dcfce7_240deg_360deg)]" data-theme="bg-green-100 text-green-900"></div>
+
+          <div class="theme-circle w-16 h-16 rounded-full cursor-pointer bg-[conic-gradient(#ec4899_0deg_120deg,#f472b6_120deg_240deg,#fce7f3_240deg_360deg)]" data-theme="bg-pink-100 text-pink-900"></div>
+        </div>
+      </div>
+      <section class="p-8">
+        <form
+          action=""
+          class="grid gap-2.5 p-4 bg-white rounded shadow w-[70%] mx-auto"
+        >
+          <label for="name1" class="font-medium">First Name</label>
+          <input
+            type="text"
+            class="border rounded my-2 py-2 px-1.5 border-gray-800"
+            name="name1"
+            id="name1"
+            placeholder="Enter first name"
+          />
+
+          <label for="name2" class="font-medium">Second Name</label>
+          <input
+            type="text"
+            class="border rounded my-2 py-2 px-1.5 border-gray-800"
+            name="name2"
+            id="name2"
+            placeholder="Enter second name"
+          />
+
+          <button
+            class="mt-4 px-4 py-2 text-white text-lg bg-blue-500 cursor-pointer hover:bg-blue-600 rounded sum"
+          >
+            Sum ASCI code
+          </button>
+        </form>
+        <div
+          class="result mt-4 text-lg text-center font-semibold bg-white text-gray-600 ronded"
+        ></div>
+      </section>
+    </main>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

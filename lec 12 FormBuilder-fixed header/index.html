@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="bg-gray-100 p-10">
+
+    <div class="max-w-lg mx-auto bg-white shadow-md rounded p-6">
+        <h2 class="text-xl font-bold text-center mb-4">Form Builder</h2>
+
+        <div class="flex flex-col gap-4 mb-6">
+            <select class="fieldType border rounded px-3 py-2 w-full">
+                <option value="text">Text</option>
+                <option value="email">Email</option>
+                <option value="number">Number</option>
+                <option value="password">Password</option>
+            </select>
+
+            <label class="flex items-center gap-2">
+                <input type="checkbox" class="isRequired w-4 h-4">
+                <span>Required</span>
+            </label>
+
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 add-btn"> Generate</button>
+        </div>
+        <form class="generated-form">
+            <button type="submit" class="mt-6 w-full bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 cursor-pointer submit-btn">Send</button>
+        </form>
+        
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>

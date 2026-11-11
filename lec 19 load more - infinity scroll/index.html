@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Load posts - more</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-cyan-50 min-h-screen">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center my-6">
+        <button class="load-posts bg-cyan-600 text-white p-2 px-4 mb-2 text-xl rounded shadow cursor-pointer duration-200 hover:bg-cyan-700 disabled:bg-gray-300">Load posts <i class="fas fa-spinner fa-spin hidden!"></i></button>
+      </div>
+      <!-- posts wrapper -->
+      <div class="posts-wrapper grid md:grid-cols-3 m-4 gap-4"> 
+      </div>
+<!-- load more btn -->
+      <div class="text-center my-6">
+        <button class="load-more bg-slate-700 text-white p-2 px-4 mb-2 text-xl rounded shadow cursor-pointer duration-200 hover:bg-slate-800 disabled:bg-gray-300 hidden">Load more <i class="fas fa-spinner fa-spin hidden!"></i></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

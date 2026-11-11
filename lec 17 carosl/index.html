@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body class="bg-indigo-100">
+    <div class="max-w-xl mx-auto my-10">
+        <div class="w-full h-96 mt-10 mb-3">
+            <img src="images/IMG-20250319-WA0000.jpg" class="mainImg w-full h-full object-cover rounded-lg shadow" alt="">
+        </div>
+        <div class="thumbnails grid grid-cols-5 gap-2">
+            <img src="images/IMG-20250319-WA0000.jpg"  class="cursor-pointer w-full h-36 object-cover rounded-lg hover:ring-4 hover:ring-white/50 duration-200">
+
+            <img src="images/IMG-20250319-WA0014.jpg"  class="cursor-pointer w-full h-36  object-cover rounded-lg hover:ring-4 hover:ring-white/50 duration-200">
+
+            <img src="images/WhatsApp Image 2026-01-31 at 8.51.37 AM.jpeg" class="cursor-pointer w-full h-36  object-cover rounded-lg hover:ring-4 hover:ring-white/50 duration-200">
+
+            <img src="images/IMG-20250319-WA0008.jpg"  class="cursor-pointer w-full h-36  object-cover rounded-lg hover:ring-4 hover:ring-white/50 duration-200">
+
+            <img src="images/WhatsApp Image 2026-01-31 at 8.51.41 AM.jpeg" class="cursor-pointer w-full h-36  object-cover rounded-lg hover:ring-4 hover:ring-white/50 duration-200">
+        </div>
+    </div>
+    
+    <script>
+        const largeImg =document.querySelector('.mainImg')
+        const thumbnails = document.querySelectorAll('.thumbnails img')
+        thumbnails.forEach(img => {
+            img.onclick = () => {
+                largeImg.src = img.src
+            }
+        })
+    </script>
+
+</body>
+</html>

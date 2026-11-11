@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="bg-purple-50 min-h-screen">
+    <div class="max-w-7xl mx-3">
+      <!-- lang btn -->
+      <button class="bg-gray-200 cursor-pointer p-2 rounded lang translatable" data-en="العربية" data-ar="En">العربية</button>
+      <!-- categories -->
+      <div class="flex justify-between items-center my-6">
+        <h2 class="font-semibold text-xl translatable" data-en="All categories" data-ar="الأقسام">All categories</h2>
+        <!-- add new btn -->
+        <button class="add-new bg-purple-600 text-white p-2 px-4 rounded shadow duration-200 hover:bg-purple-700 cursor-pointer translatable" data-en="Add new" data-ar=" إضافة جديد ">Add new</button>
+      </div>
+
+      <!-- tailwind table flowbite -->
+
+      <div class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default">
+        <table class="categories-table w-full text-sm text-left rtl:text-right text-body bg-white shadow rounded">
+          <thead class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default">
+            <tr>
+              <th scope="col" class="px-6 py-3 font-medium translatable" data-en="ID" data-ar="المعرف">ID</th>
+              <th scope="col" class="px-6 py-3 font-medium translatable" data-en="Image" data-ar="الصورة">Image</th>
+              <th scope="col" class="px-6 py-3 font-medium translatable" data-en="Name" data-ar="الاسم">Name</th>
+              <th scope="col" class="px-6 py-3 font-medium translatable" data-en="Actions" data-ar="العمليات">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- add new category modal -->
+    <div class="modal fixed top-0 left-0 w-full h-full bg-slate-900/50 z-10 backdrop-blur-[1px] flex justify-center items-center opacity-0 invisible duration-300">
+      <div class="modal-content bg-white max-w-5xl min-w-md p-6 rounded shadow-2xl">
+        <form>
+          <h3 class="font-semibold text-xl mb-4">Add new category</h3>
+          <!-- name fields -->
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <input type="text" name="name_en" class="p-2 rounded border border-gray-400 outline-0" placeholder="English name">
+            <input type="text" name="name_ar" class="p-2 rounded border border-gray-400 outline-0" placeholder="Arabic name">
+          </div>
+          <!-- description area -->
+          <div class="grid md:grid-cols-2 gap-4 mb-4">
+            <textarea rows="4"  name="description_en" class="p-2 rounded border border-gray-400 outline-0" placeholder="English description"></textarea>
+            <textarea rows="4" name="description_ar" class="p-2 rounded border border-gray-400 outline-0" placeholder="Arabic description"></textarea>
+          </div>
+          <!-- upload image field-->
+           <div>
+              <label for="image">Image</label>
+              <input type="file" name="image" id="image" class="p-2 rounded border border-gray-400 outline-0 w-full">
+           </div>
+           <button class="bg-purple-500 rounded cursor-pointer hover:bg-purple-600 text-white p2 px-4 duration-200 translatable mt-4" data-en="Save" data-ar="حفظ">Save <i class="fas fa-save"></i></button>
+        </form>
+      </div>
+    </div>
+    <script src="js/categories.js"></script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Builder with insertAdjacentHTML</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .dragging { opacity: 0.5; }
+  </style>
+</head>
+<body class="bg-gray-100 p-10">
+
+  <div class="max-w-lg mx-auto bg-white shadow-md rounded p-6">
+    <h2 class="text-xl font-bold mb-4">Form Builder</h2>
+
+    <!-- أدوات التحكم -->
+    <div class="flex flex-col gap-4 mb-6">
+      <input id="fieldLabel" type="text" placeholder="اسم الحقل" 
+             class="border rounded px-3 py-2 w-full" />
+
+      <select id="fieldType" class="border rounded px-3 py-2 w-full">
+        <option value="text">نص</option>
+        <option value="email">إيميل</option>
+        <option value="number">رقم</option>
+        <option value="password">كلمة مرور</option>
+      </select>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="isRequired" class="w-4 h-4">
+        <span>مطلوب</span>
+      </label>
+
+      <button id="addField" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        إضافة حقل
+      </button>
+    </div>
+
+    <!-- النموذج الناتج -->
+    <form id="generatedForm" class="space-y-4">
+      <!-- الحقول المضافة -->
+    </form>
+
+    <!-- زر إرسال -->
+    <button class="mt-6 w-full bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">
+      إرسال النموذج
+    </button>
+  </div>
+
+  <script>
+    const addFieldBtn = document.getElementById("addField");
+    const fieldTypeSelect = document.getElementById("fieldType");
+    const isRequiredCheckbox = document.getElementById("isRequired");
+    const fieldLabelInput = document.getElementById("fieldLabel");
+    const formContainer = document.getElementById("generatedForm");
+
+    let draggedItem = null;
+
+    addFieldBtn.addEventListener("click", () => {
+      const type = fieldTypeSelect.value;
+      const required = isRequiredCheckbox.checked;
+      const labelText = fieldLabelInput.value || `حقل (${type})`;
+
+      // بناء HTML جاهز
+      const fieldHTML = `
+        <div class="flex flex-col border p-3 rounded bg-gray-50 relative" draggable="true">
+          <label class="mb-1 font-medium">${labelText}${required ? " *" : ""}</label>
+          <input type="${type}" class="border rounded px-3 py-2" ${required ? "required" : ""}>
+          <button type="button" class="absolute top-2 right-2 text-red-500 hover:text-red-700 delete-btn">✕</button>
+        </div>
+      `;
+
+      formContainer.insertAdjacentHTML("beforeend", fieldHTML);
+
+      // إضافة الأحداث للحقل الجديد
+      const newField = formContainer.lastElementChild;
+
+      // حذف الحقل
+      newField.querySelector(".delete-btn").addEventListener("click", () => {
+        newField.remove();
+      });
+
+      // Drag & Drop events
+      newField.addEventListener("dragstart", () => {
+        draggedItem = newField;
+        newField.classList.add("dragging");
+      });
+      newField.addEventListener("dragend", () => {
+        draggedItem = null;
+        newField.classList.remove("dragging");
+      });
+    });
+
+    // ترتيب الحقول بالسحب
+    formContainer.addEventListener("dragover", (e) => {
+      e.preventDefault();
+      const afterElement = getDragAfterElement(formContainer, e.clientY);
+      if (afterElement == null) {
+        formContainer.appendChild(draggedItem);
+      } else {
+        formContainer.insertBefore(draggedItem, afterElement);
+      }
+    });
+
+    function getDragAfterElement(container, y) {
+      const draggableElements = [...container.querySelectorAll("div:not(.dragging)")];
+      return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        if (offset < 0 && offset > closest.offset) {
+          return { offset: offset, element: child };
+        } else {
+          return closest;
+        }
+      }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+  </script>
+
+</body>
+</html>
+formContainer.insertAdjacentHTML("beforeend", fieldHTML);
+const newField = formContainer.querySelector("div:last-child");
+
+
+const deleteBtn = newField.querySelector(".delete-btn");
+deleteBtn.addEventListener("click", () => newField.remove());
