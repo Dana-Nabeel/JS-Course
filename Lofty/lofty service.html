@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- progress tabs -->
+    <section class="container mx-auto my-10 px-10 bg-amber-100 rounded">
+      <div class="flex justify-center items-center pt-5">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat sunt
+          voluptates quod eum nemo aut eaque nobis.
+        </p>
+      </div>
+      <!-- progress tabs -->
+      <div class="flex mx-5 mt-5 items-center gap-2 w-full">
+        <!-- import tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-black block cursor-pointer"
+          data-tab="import"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 data-tab="import" class="font-bold">import</h2>
+        <div
+          data-tab="import"
+          class="line h-1.5 w-20 mt-2 bg-amber-50 rounded"
+        ></div>
+
+        <!-- shipping tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-amber-50 block cursor-pointer"
+          data-tab="shipping"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 class="font-bold capitalize hidden" data-tab="shipping">
+          shipping
+        </h2>
+        <div
+          class="line h-1.5 w-20 mt-2 bg-amber-50 rounded"
+          data-tab="shipping"
+        ></div>
+
+        <!-- storage tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-amber-50 block cursor-pointer"
+          data-tab="storage"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 class="font-bold capitalize hidden" data-tab="storage">storage</h2>
+        <div
+          class="line h-1.5 w-20 mt-2 bg-amber-50 rounded"
+          data-tab="storage"
+        ></div>
+
+        <!-- customer tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-amber-50 block cursor-pointer"
+          data-tab="customer"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 class="font-bold capitalize hidden" data-tab="customer">
+          customer services
+        </h2>
+        <div
+          class="line h-1.5 w-20 mt-2 bg-amber-50 rounded"
+          data-tab="customer"
+        ></div>
+
+        <!-- delivery tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-amber-50 block cursor-pointer"
+          data-tab="delivery"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 class="font-bold capitalize hidden" data-tab="delivery">
+          delivery
+        </h2>
+        <div
+          class="line h-1.5 w-20 mt-2 bg-amber-50 rounded"
+          data-tab="delivery"
+        ></div>
+
+        <!-- payment tab -->
+        <div
+          class="circle w-8 h-8 rounded-full text-center bg-amber-50 block cursor-pointer"
+          data-tab="payment"
+        >
+          <i class="text-center fa-solid fa-box-open text-white"></i>
+        </div>
+        <h2 class="font-bold capitalize hidden" data-tab="payment">payment</h2>
+      </div>
+
+      <div>
+        <!-- card 1 -->
+        <div class="card container mx-auto block" data-tab="import">
+          <div class="flex justify-between gap-7">
+            <div class="image">
+              <img
+                class="mt-10 rounded-xl object-cover w-500 h-100"
+                src="images/IMG-20250319-WA0011.jpg"
+                alt="Temo"
+              />
+            </div>
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem, ipsum dolor.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                repellendus tempore placeat molestias beatae ipsam repudiandae
+                quisquam cumque eveniet quia nemo dolorum aut amet, ea ab
+                officiis! Beatae, facere delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="card container mx-auto hidden" data-tab="shipping">
+          <div class="flex justify-between gap-7">
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem, ipsum dolor.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                repellendus tempore placeat molestias beatae ipsam repudiandae
+                quisquam cumque eveniet quia nemo dolorum aut amet, ea ab
+                officiis! Beatae, facere delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 3 -->
+        <div class="card container mx-auto hidden" data-tab="storage">
+          <div class="flex justify-between gap-7">
+            <div class="image">
+              <img
+                class="mt-10 rounded-xl object-cover w-500 h-100"
+                src="images/IMG-20250319-WA0011.jpg"
+                alt="Temo"
+              />
+              <img
+                class="mt-10 rounded-xl object-cover w-500 h-100"
+                src="images/IMG-20250319-WA0011.jpg"
+                alt="Temo"
+              />
+            </div>
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem, ipsum dolor.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex
+                repellendus tempore placeat molestias beatae ipsam repudiandae
+                quisquam cumque eveniet quia nemo dolorum aut amet, ea ab
+                officiis! Beatae, facere delectus?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="card container mx-auto hidden" data-tab="customer">
+          <div class="flex justify-between gap-7">
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem ipsum dolor sit.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                nihil in blanditiis laborum quas error consectetur itaque maxime
+                rerum. Vero accusamus quasi dolorum dignissimos iure
+                voluptatibus, cum pariatur voluptatem harum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 5 -->
+        <div class="card container mx-auto hidden" data-tab="delivery">
+          <div class="flex justify-between gap-7">
+            <div class="image">
+              <img
+                class="mt-10 rounded-xl object-cover w-500 h-100"
+                src="images/IMG-20250319-WA0011.jpg"
+                alt="Temo"
+              />
+            </div>
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem ipsum dolor sit.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                nihil in blanditiis laborum quas error consectetur itaque maxime
+                rerum. Vero accusamus quasi dolorum dignissimos iure
+                voluptatibus, cum pariatur voluptatem harum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- card 6 -->
+        <div class="card container mx-auto hidden" data-tab="payment">
+          <div class="flex justify-between gap-7">
+            <div class="mt-10">
+              <h1 class="font-bold text-3xl mb-3">Lorem ipsum dolor sit.</h1>
+              <p class="text-lg text-gray-600 mb-6">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+                nihil in blanditiis laborum quas error consectetur itaque maxime
+                rerum. Vero accusamus quasi dolorum dignissimos iure
+                voluptatibus, cum pariatur voluptatem harum. Lorem ipsum dolor
+                sit amet consectetur adipisicing elit. Vel veritatis tempora
+                aut, error expedita vero, temporibus quae, totam voluptate nemo
+                cumque asperiores fugiat nesciunt et. Culpa mollitia quidem
+                voluptas sint!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="container mx-auto grid text-center">
+        <div>
+          <h1 class="font-bold text-2xl my-5 capitalize">
+            frequently asked questions
+          </h1>
+          <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="tabs flex justify-center items-center gap-5">
+          <!-- Tab 1 -->
+          <h3
+            class="tab px-2.5 text-center h-10 rounded-2xl border-rose-300 bg-rose-500 text-black py-2 cursor-pointer"
+            data-target=".general"
+          >
+            عام
+          </h3>
+          <!-- Tab 2 -->
+          <h3
+            class="tab px-2.5 text-center h-10 rounded-2xl border border-rose-300 bg-white cursor-pointer text-black py-2"
+            data-target=".import"
+          >
+            استيراد المنتجات
+          </h3>
+          <!-- Tab 3 -->
+          <h3
+            class="tab px-2.5 text-center h-10 rounded-2xl border border-rose-300 bg-white cursor-pointer text-black py-2"
+            data-target=".management"
+          >
+            ادارة الطلبات
+          </h3>
+          <!-- Tab 4 -->
+          <h3
+            class="tab px-2.5 text-center h-10 rounded-2xl border border-rose-300 bg-white cursor-pointer text-black py-2"
+            data-target=".storage"
+          >
+            التخزبن والتلفيف
+          </h3>
+        </div>
+      </div>
+
+      <!-- accordion content -->
+      <div class="wrapper rounded mx-auto my-6 w-[60%] shadow bg-amber-50">
+        <div class="general block">
+          <div
+            class="item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+          >
+            <div class="title cursor-pointer flex justify-between items-center">
+              <h3>Lorem, ipsum dolor.</h3>
+              <i
+                class="fas fa-chevron-down transition-transform duration-200"
+              ></i>
+            </div>
+            <div class="content hidden text-gray-500">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+                illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+                accusamus nobis tempore eum.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+          >
+            <div class="title cursor-pointer flex justify-between items-center">
+              <h3>Lorem, ipsum dolor.</h3>
+              <i
+                class="fas fa-chevron-down transition-transform duration-200"
+              ></i>
+            </div>
+            <div class="content hidden text-gray-500">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+                illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+                accusamus nobis tempore eum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="import hidden item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+        >
+          <div class="title cursor-pointer flex justify-between items-center">
+            <h3>Lorem, ipsum dolor.</h3>
+            <i
+              class="fas fa-chevron-down transition-transform duration-200"
+            ></i>
+          </div>
+          <div class="content hidden text-gray-500">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+              magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+              illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+              accusamus nobis tempore eum.
+            </p>
+          </div>
+        </div>
+        <div class="management hidden">
+          <div
+            class="item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+          >
+            <div class="title cursor-pointer flex justify-between items-center">
+              <h3>Lorem, ipsum dolor.</h3>
+              <i
+                class="fas fa-chevron-down transition-transform duration-200"
+              ></i>
+            </div>
+            <div class="content hidden text-gray-500">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+                illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+                accusamus nobis tempore eum.
+              </p>
+            </div>
+          </div>
+          <div
+            class="item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+          >
+            <div class="title cursor-pointer flex justify-between items-center">
+              <h3>Lorem, ipsum dolor.</h3>
+              <i
+                class="fas fa-chevron-down transition-transform duration-200"
+              ></i>
+            </div>
+            <div class="content hidden text-gray-500">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+                magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+                illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+                accusamus nobis tempore eum.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="storage hidden item p-4 border border-amber-100 mb-1 rounded bg-amber-200"
+        >
+          <div class="title cursor-pointer flex justify-between items-center">
+            <h3>Lorem, ipsum dolor.</h3>
+            <i
+              class="fas fa-chevron-down transition-transform duration-200"
+            ></i>
+          </div>
+          <div class="content hidden text-gray-500">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
+              magnam consectetur mollitia temporibus, nam itaque. Nemo dicta
+              illo quisquam eos et, unde quaerat repudiandae sunt deserunt
+              accusamus nobis tempore eum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // task 1:progress tabs
+      const circles = document.querySelectorAll(".circle");
+      const tabs = document.querySelectorAll("h2[data-tab]");
+      const lines = document.querySelectorAll(".line");
+      const cards = document.querySelectorAll(".card");
+
+      circles.forEach((circle, index) => {
+        circle.onclick = () => {
+          const tab = circle.dataset.tab;
+
+          circles.forEach((c, i) => {
+            if (i <= index) {
+              c.classList.replace("bg-amber-50", "bg-black");
+            } else {
+              c.classList.replace("bg-black", "bg-amber-50");
+            }
+          });
+
+          lines.forEach((l, i) => {
+            if (i <= index - 1) {
+              l.classList.replace("bg-amber-50", "bg-black");
+            } else {
+              l.classList.replace("bg-black", "bg-amber-50");
+            }
+          });
+
+          // hide all
+          tabs.forEach((t) => t.classList.add("hidden"));
+          cards.forEach((ca) => ca.classList.add("hidden"));
+
+          // show target
+          document
+            .querySelector(`h2[data-tab="${tab}"]`)
+            .classList.remove("hidden");
+          document
+            .querySelector(`.card[data-tab="${tab}"]`)
+            .classList.remove("hidden");
+        };
+      });
+      // Accordion
+      const wrapper = document.querySelector(".wrapper");
+      wrapper.onclick = (e) => {
+        if (
+          e.target.classList.contains("title") ||
+          e.target.closest(".title")
+        ) {
+          let title = e.target.closest(".title");
+
+          const allContents = wrapper.querySelectorAll(".content");
+          allContents.forEach((el) => {
+            if (el !== title.nextElementSibling) el.classList.add("hidden");
+          });
+          const allIcons = wrapper.querySelectorAll(".title i");
+          allIcons.forEach((el) => {
+            if (el !== title.querySelector("i"))
+              el.classList.remove("rotate-180");
+          });
+          title.nextElementSibling.classList.toggle("hidden");
+          title.querySelector("i").classList.toggle("rotate-180");
+        }
+      };
+      // Tabs too show accordion
+      const tab = document.querySelectorAll(".tabs .tab");
+      tab.forEach((el) => {
+        el.onclick = () => {
+          document
+            .querySelector(".tabs .tab.bg-rose-500")
+            .classList.replace("bg-rose-500", "bg-white");
+          el.classList.replace("bg-white", "bg-rose-500");
+
+          document
+            .querySelector(".wrapper div.block")
+            .classList.replace("block", "hidden");
+          document
+            .querySelector(el.dataset.target)
+            .classList.replace("hidden", "block");
+        };
+      });
+    </script>
+  </body>
+</html>
